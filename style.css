@@ -18,11 +18,19 @@
 
 }
 
+
 .btn:hover {
     background-color: white;
     color: blue;
     border: 2px solid blue;
 }
+
+.hidden-btn {
+    display: none;
+    margin: 50px auto;
+    width: 5%;
+}
+
 
 /* header style  */
 header {
@@ -165,3 +173,49 @@ footer {
 }
 
 /* media query */
+
+@media screen and (min-width: 689px) and (max-width:992px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .half-div {
+        width: 90%;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hidden-btn {
+        display: block;
+        width: 9%;
+    }
+}
+
+/* small or mobile device  */
+@media screen and (max-width:688px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .half-div {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+
+    .product-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hidden-btn {
+        display: block;
+        width: 12%;
+    }
+}
